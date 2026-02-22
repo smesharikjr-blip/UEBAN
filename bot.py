@@ -68,6 +68,8 @@ radio_mode = {}  # Режим радио (вкл/выкл)
 current_song = {}  # Текущий играющий трек
 
 @bot.event
+async def on_command(ctx):
+    await asyncio.sleep(0.5)  # полсекунды между командами
 async def on_ready():
     print(f'{bot.user} подключился к Discord!')
     print(f'Бот находится на {len(bot.guilds)} серверах')
